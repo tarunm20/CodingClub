@@ -33,6 +33,10 @@ b = int(input("\n Enter Integer 2: "))
 print("\nThe product of your two numbers is", function(a,b))
 #Example 6 - classes
 print("\n\n\n\n\n\n\n\n Example 6")
+print("Enter first point: ")
+x1,y1 = [int(x) for x in input().split(',')]
+print("\nEnter second point: ")
+x2,y2 = [int(x) for x in input().split(',')]
 class Point:
     def __init__(self,x,y):
         self.x = x
@@ -42,11 +46,8 @@ class Point:
         slope = (p2.y - self.y)/(p2.x - self.x)
         return slope
 
-    def toString(self):
-        return (self.x,self.y)
-
-obj1 = Point(1,2)
-obj2 = Point(4,5)
+obj1 = Point(x1,y1)
+obj2 = Point(x2,y2)
 slope = obj1.slope(obj2)
-print("The point 1 is: ", obj1.toString(), "and point 2 is: ", obj2.toString())
 print("The slope of the line connecting the two points is: ", slope)
+wait = input("\nPRESS ENTER TO CONTINUE.")
